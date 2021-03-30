@@ -1,0 +1,76 @@
+{% extends "site.html" %}
+{% block title %}Locations{% endblock %}
+
+{% block style %}
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+{% endblock %}
+
+{% block headjs %}
+    {{ super() }}
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+{% endblock %}
+
+{% block content %}
+    <h1>PyLadies Locations</h1>
+    <h2>PyLadies Locations</h2>
+    <div id="map" class="leaflet-container leaflet-retina leaflet-fade-anim">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1QINwclDD_RxTtFcaw-wF5vYhdvNFlG-Q" width="750" height="450"></iframe>
+    </div>
+
+    <section id="archive">
+            <article class="chapters">
+                <div class="social">
+
+                    {% for chapter in site.chapters %}
+                    <div class="chapter_location" data-meetup-id="{{chapter.meetup_id}}" data-chapter-name="{{ chapter.name }}" >
+                        <div class="logo-container">
+                          {% if chapter.image %}
+                            <img src="../assets/images/{{chapter.image}}" alt="{{chapter.name}}" />
+                          {% else %}
+                            <img src="../assets/images/pyladies-sq-logo.png" alt="{{chapter.name}}" />
+                          {% endif %}
+                        </div>
+                        <h3 class="chpts chapter-name">
+                            {% if chapter.external_website %}
+                                <a href="{{chapter.website}}">
+                            {% else %}
+                                <a href="/locations/{{chapter.website}}">
+                            {% endif %}
+                            {{chapter.name}}</a>
+                        </h3>
+                        <h3 class="chpts social-icons">
+                            {% if chapter.website %}
+                            <a class="icon-earth" data-icon="&#xe9ca;" href="{{chapter.website}}" title="Website"></a>
+                            {% endif %}
+                            {% if chapter.email %}
+                            <a class="icon-mail4" data-icon="&#xea86;" href="mailto:{{chapter.email}}" title="Contact"></a>
+                            {% endif %}
+                            {% if chapter.facebook %}
+                            <a class="icon-facebook" data-icon="&#xea90;" href="https://facebook.com/{{chapter.facebook}}" title="Facebook"></a>
+                            {% endif %}
+                            {% if chapter.github %}
+                            <a class="icon-github" data-icon="&#xeab0;" href="http://github.com/{{chapter.github}}" title="GitHub"></a>
+                            {% endif %}
+                            {% if chapter.twitter %}
+                            <a class="icon-twitter" data-icon="&#xea96;" href="https://twitter.com/{{chapter.twitter}}" title="Twitter"></a>
+                            {% endif %}
+                            {% if chapter.meetup %}
+                            <a class="icon-meetup" data-icon="&#xe901;" title="Meetup Link" href="http://www.meetup.com/{{chapter.meetup}}/"></a>
+                            {% endif %}
+							{% if chapter.linkedin %}
+                            <a class="icon-linkedin" data-icon="&#xe800;" title="LinkedIn Link" href="http://www.linkedin.com/{{chapter.linkedin}}/"></a>
+                            {% endif %}
+							{% if chapter.youtube %}
+                            <a class="icon-youtube-play" data-icon="&#xec56;" title="YouTube Link" href="https://www.youtube.com/{{chapter.youtube}}/"></a>
+                            {% endif %}
+							{% if chapter.instagram %}
+                            <a class="icon-instagram" data-icon="&#xe83c;" title="Instagram Link" href="https://www.instagram.com/{{chapter.instagram}}/"></a>
+                            {% endif %}
+                        </h3>
+                    </div>
+                    {% endfor %}
+              </div>
+            </article>
+    </section>
+
+{% endblock %}
