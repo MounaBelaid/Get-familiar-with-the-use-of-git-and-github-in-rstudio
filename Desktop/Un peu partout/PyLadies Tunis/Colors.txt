@@ -1,3 +1,0 @@
-Rose : #E61543
-Bleu : #366D9A
-Jaune : #FFCB3B
