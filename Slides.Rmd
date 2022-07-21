@@ -1,8 +1,8 @@
 ---
-title: "First Steps in Learning the Use of Git & GitHub in RStudio"
+title: "Getting Familiar with Git & GitHub in RStudio"
 author: "Mouna Belaid"
 institute: "Prime Analytics"
-date: "June 18th, 2022"
+date: "September 27th, 2022"
 output:
   xaringan::moon_reader:
     css: 
@@ -33,10 +33,10 @@ meta() %>%
     description = "Getting familiar with the use of Git & GitHub in RStudio",
     generator = "xaringan and remark.js"
   ) %>% 
-  meta_name("github-repo" = "MounaBelaid/First-Steps-in-Learning-the-Use-of-Git-and-GitHub-in-RStudio") %>% 
+  meta_name("github-repo" = "MounaBelaid/Get-familiar-with-the-use-of-git-and-github-in-rstudio") %>% 
   meta_social(
-    title = "First Steps in Learning the Use of Git & GitHub in RStudio",
-    url = "https://mounabelaid.github.io/First-Steps-in-Learning-the-Use-of-Git-and-GitHub-in-RStudio/",
+    title = "Getting familiar with the use of Git & GitHub in RStudio",
+    url = "https://mounabelaid.github.io/Get-familiar-with-the-use-of-git-and-github-in-rstudio",
     image = "",
     image_alt = paste(
       "Title slide of First Steps in Learning the Use of Git & GitHub in RStudio",
@@ -76,9 +76,9 @@ xaringanExtra::style_share_again(
 ```
 
 class: title-slide, center, top
-background-image: url(img/git_github.png), url(img/useR2022.jpg)
+background-image: url(img/git_github.png), url(img/Oman_Abuja_logos.png)
 background-position: 90% 75%, 75% 75%
-background-size: 20%, cover
+background-size: 5%, cover
 
 .right-column[
 # `r rmarkdown::metadata$title`
@@ -99,7 +99,7 @@ class: about-me-slide, inverse, middle, center
 
 ## Mouna Belaid
 
-### Business Intelligence Consultant<br>Prime Analytics - Tunis, Tunisia<br>Co-Founder & Co-Organizer at Tunis R User Group
+### Business Intelligence Consultant<br>Prime Analytics - Tunis, Tunisia<br>Organizer at R-Ladies Paris
 
 [`r icons::fontawesome("link")`mounabelaid.netlify.app/](https://mounabelaid.netlify.app/)
 [`r icons::fontawesome("twitter")`@mounaa_belaid](https://twitter.com/mounaa_belaid)
@@ -109,7 +109,7 @@ class: about-me-slide, inverse, middle, center
 ---
 layout: true
 
-<a class="footer-link" href="https://bit.ly/3B5oZcv">bit.ly/3B5oZcv &mdash; Mouna Belaid</a>
+<a class="footer-link" href="https://bit.ly/3B7km3p">bit.ly/3B7km3p &mdash; Mouna Belaid</a>
 
 <!-- this adds the link footer to all slides, depends on footer-link class in css-->
 ---
