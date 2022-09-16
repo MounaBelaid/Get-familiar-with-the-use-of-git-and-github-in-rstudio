@@ -2,7 +2,7 @@
 title: "Getting Familiar with Git & GitHub in RStudio"
 author: "Mouna Belaid"
 institute: "Prime Analytics"
-date: "September 27th, 2022"
+date: "September 24th, 2022"
 output:
   xaringan::moon_reader:
     css: 
@@ -78,7 +78,7 @@ xaringanExtra::style_share_again(
 class: title-slide, center, top
 background-image: url(img/git_github.png), url(img/Oman_Abuja_logos.png)
 background-position: 90% 75%, 75% 75%
-background-size: 5%, cover
+background-size: 20%, cover
 
 .right-column[
 # `r rmarkdown::metadata$title`
@@ -106,6 +106,10 @@ class: about-me-slide, inverse, middle, center
 [`r icons::icon_style(icons::fontawesome("github"), scale = 1)` @MounaBelaid](https://github.com/MounaBelaid)
 [`r icons::icon_style(icons::fontawesome("youtube"), scale = 1)` Mouna Belaid](https://www.youtube.com/channel/UCID33pDULsQg2y4FVlv4CnQ)
 
+???
+
+As ….. introduced me. I'm Mouna BELAID and I'm a Business Intelligence Consultant at Prime Analytics and Organizer of R-Ladies Paris
+
 ---
 layout: true
 
@@ -128,17 +132,20 @@ layout: true
   - Connect a new RStudio project started from scratch to GitHub
   - Learn about GitHub fundamentals
   - Clone an existing GitHub Repository to an RStudio Project
-  - Create branches
-  - Make commits 
-  - Introduce changes to your R script with pull requests
+  - Make commits
 ]
 
 .pull-right[
 
-5) Practice a set of tasks to get familiar with Git and GitHub in RStudio
-
-6) Submission of a new Cheatsheet to the ["Cheatsheets" GitHub Repository](https://github.com/rstudio/cheatsheets) maintained by RStudio
+5) Submission of a new Cheatsheet to the ["Cheatsheets" GitHub Repository](https://github.com/rstudio/cheatsheets) maintained by RStudio
 ]
+
+???
+
+So what's about the session outline ?
+I will start giving an overview of ……..
+This session is intended to be interactive that's why we will practice a set of tasks to get familiar with Git and GitHub in RStudio
+First you will learn about GitHub fundamentals then we will move to some practices.
 
 ---
 
@@ -161,6 +168,10 @@ layout: true
 .pull-left-narrow[
 .center[`r icons::icon_style(icons::fontawesome("github"), scale = 2)`]]
 .pull-right-wide[### .black[Free GitHub account]]
+
+???
+
+You need to have a GitHub account and Git installed before moving on. 
 
 ---
 
@@ -196,13 +207,23 @@ licence. DOI: <a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.33
 ] 
 
 .panel[.panel-name[Benefits of version control]
-.pull-left-wide[
+.pull-left[
 - A complete .my-red[long-term] change history of every file
 
 - Branching and merging
 
 - Ability to make your work more .my-red[reproducible]
 ]
+
+.pull-right[
+.center[
+![:scale 140%](img/illustration1.png)
+<font size="-0.5"> GitHub illustrated series by Allison Horst and Julie Lowndes.
+A collaboration around open science, coding, teaching, and art.
+<a href="https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/">openscapes.org/blog/2022/05/27/github-illustrated-series/</a> </font>
+]
+]
+
 ]
 
 .panel[.panel-name[Popular Version Control Systems]
@@ -211,6 +232,22 @@ licence. DOI: <a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.33
 ]
 ] 
 ]
+
+???
+
+Version control, also known as source control, is the practice of tracking and managing changes to software code.
+The code for a project, application or software component is typically organized in a folder structure.
+Version control helps tracking every individual change in the code by each contributor and helping prevent concurrent work from conflicting.
+You know! As development environments have accelerated, version control systems will help software teams work faster and smarter.
+
+Version control will help you streamline your work because it takes care of otherwise time-consuming bookkeeping and unrelenting file tracking. 
+Instead of spending our time inspecting and fretting over whether “analysis_final_v2.xls” or “analysis_final_final.xls” is truly the final version, with a version control tool we can be confident in our completed analysis and move to the next step.
+
+On this context, I want to tell you about an illustrated series that has been recenty created by Allison Horst and Julia Stewart Lowndes. The figure that you are looking at and which I find so insightful :D is one of the amazing illustrations that tell a story about why GitHub is so powerful for supporting, reusing, contributing, and failing safely. I will share with you now in the chat link (https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/)  so that you get to know more later about this amazing work. There are really other amazing illustrations.
+Version Control will also enable you to make your work more reproducible. Using version control for your research project means that your work is totally transparent, and because all your actions are recorded, it enables others to reproduce your studies.
+
+As you can see, there are many choices, but here we are going to focus on just one, Git.
+So we have SVN, or Subversion…
 
 ---
 template: question
@@ -232,7 +269,12 @@ template: question
 .pull-right-wide[### .black[Git is a distributed version control tool to track the changes in the source code of a project]]
 
 --
-.pull-right-wide[### .black[Git's key design objectives are functionality, performance, security and flexibility]]
+.pull-right-wide[### .black[Git's key design objectives are functionality, performance, security, and flexibility]]
+
+???
+
+Git is distributed version control software. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way.
+Being distributed means that every developer working with a Git repository has a copy of that entire repository - every commit, every branch, every file. It was originally developed in 2005 by Linus Torvalds, the creator of the Linux operating system kernel
 
 ---
 template: question
@@ -255,6 +297,24 @@ template: question
 
 --
 .pull-right-wide[### .black[GitHub uses <img src="img/logo-Git.png" width="20%"/> the most popular open source version control software, to track every contribution and contributor to a defined project.]]
+
+???
+
+What's GitHub?
+GitHub is a collaboration platform.  It is the most popular hosting service for collaborating on code using Git. Other hosting services include Bitbucket, and Gitlab.
+
+---
+.center[
+![:scale 80%](img/illustration2.png)
+<font size="-0.2"> GitHub illustrated series by Allison Horst and Julie Lowndes.
+A collaboration around open science, coding, teaching, and art.
+<a href="https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/">openscapes.org/blog/2022/05/27/github-illustrated-series/</a> </font>
+]
+
+???
+
+This is a second illustration from the GitHub illustration series that I've talked about to you earlier. 
+Collaboration…..
 
 ---
 template: question
@@ -292,6 +352,13 @@ git --version
 Provide this PAT next time a Git operation asks for your password.
 
 ![:scale 100%](img/token2.png)
+Or, from RStudio, do the following:
+
+```{r, eval=FALSE, echo=TRUE}
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+```
+
 ]
 ]
 
@@ -316,31 +383,22 @@ template: question
 ## Getting the most out of GitHub and Git
 
 .panelset[
-.panel[.panel-name[1) Create	a	new	RStudio	Project	and	push	it	to	GitHub]
+.panel[.panel-name[1) Create	a	new	RStudio	Project	and	push it	to GitHub]
 `r emo::ji("rocket")` **Learning objectives**
                
-.pull-left[- Clone a GitHub repository on your own machine
+- Link a remote GitHub repository to a local repository
              
-- Fork a GitHub repository
+- Make commits
              
-- Create a branch on GitHub using Git
-             
-- Open a pull request]
-             
-.pull-right[- Respond to a review
-             
-- Merge your pull request
-             
-- Explore the following commands: `git init`, `git clone`, `git config`, `git add`, `git status`, `git commit`, `git push`, `git pull`, `git branch`, and `git merge`]
+- Create a new repository on GitHub
 ]<!---->
+
 .panel[.panel-name[2) Clone	an	existing	GitHub	Repository	to	an	RStudio	Project]
 `r emo::ji("rocket")` **Learning objectives**
 
 - Connect a new RStudio project started from scratch to GitHub
 
 - GitHub fundamentals
-
-- Find interesting Open Source projects to work on
 
 - Explore a GitHub repository
 ] <!---->
@@ -543,34 +601,6 @@ template: question
 **Step 3.** Go back to you R session and enter the link	in *Respository	URL* then click on *Create Project*
 
 ![:scale 45%](img/PR_Clone3.png)
----
-template: question
-
-`r icons::icon_style(icons::fontawesome("check-square"), scale = 3, fill = "white")`
-# Let's master fundamentals on GitHub!
-
----
-
-name: activity
-class: inverse
-
-.left-column[
-## Activity<br>`r icons::fontawesome("edit")`<br>
-### 10:00 mins
-]
-
-.right-column[
-### Let's master fundamentals on GitHub!
-
-----
-.my-white[
-1. Create a branch in the repository that you've created [earlier](#repository)
-2. Make changes to this repository
-3. Commit and push your changes to your branch
-4. Create a pull request to ask collaborators for feedback on your changes
-5. Merge your pull request
-6. Delete your branch]
-]
 
 ---
 template: question
