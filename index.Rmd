@@ -15,7 +15,7 @@ output:
     nature:
       highlightStyle: googlecode
       highlightLines: true
-      countIncrementalSlides: true
+      countIncrementalSlides: false
       ratio: 16:9
       beforeInit: "macros.js"
       slideNumberFormat: |
