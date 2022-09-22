@@ -120,7 +120,6 @@ layout: true
 
 # Session Outline
 
-
 .pull-left[
 1) Overview of Version Control, benefits of version control, and popular version control systems
 
@@ -152,6 +151,7 @@ First you will learn about GitHub fundamentals then we will move to some practic
 # Requirements
 
 --
+template: requirements
 
 .pull-left-narrow[
 .center[<img src="img/r-rstudio.png" width="180%"/>]]
