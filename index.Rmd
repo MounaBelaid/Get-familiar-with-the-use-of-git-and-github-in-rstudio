@@ -17,6 +17,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: 16:9
+      #ratio: 191:100
       beforeInit: "macros.js"
       slideNumberFormat: |
         <div class="progress-bar-container">
