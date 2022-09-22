@@ -33,13 +33,13 @@ meta() %>%
     description = "Getting familiar with the use of Git & GitHub in RStudio",
     generator = "xaringan and remark.js"
   ) %>% 
-  meta_name("github-repo" = "MounaBelaid/Get-familiar-with-the-use-of-git-and-github-in-rstudio") %>% 
+  meta_name("github-repo" = "MounaBelaid/Getting-familiar-with-the-use-of-git-and-github-in-rstudio") %>% 
   meta_social(
     title = "Getting familiar with the use of Git & GitHub in RStudio",
     url = "https://mounabelaid.github.io/Get-familiar-with-the-use-of-git-and-github-in-rstudio",
     image = "",
     image_alt = paste(
-      "Title slide of First Steps in Learning the Use of Git & GitHub in RStudio",
+      "Title slide of Getting familiar with the use of Git & GitHub in RStudio",
       "Workshop delivered by Mouna Belaid"
       ),
     og_type = "website",
@@ -78,7 +78,7 @@ xaringanExtra::style_share_again(
 class: title-slide, center, top
 background-image: url(img/git_github.png), url(img/Oman_Abuja_logos.png)
 background-position: 90% 75%, 75% 75%
-background-size: 20%, cover
+background-size: 20%, contain
 
 .right-column[
 # `r rmarkdown::metadata$title`
@@ -99,7 +99,7 @@ class: about-me-slide, inverse, middle, center
 
 ## Mouna Belaid
 
-### Business Intelligence Consultant<br>Prime Analytics - Tunis, Tunisia<br>Organizer at R-Ladies Paris
+### Business Intelligence Consultant<br>Prime Analytics - Paris, France<br>Organizer of R-Ladies Paris
 
 [`r icons::fontawesome("link")`mounabelaid.netlify.app/](https://mounabelaid.netlify.app/)
 [`r icons::fontawesome("twitter")`@mounaa_belaid](https://twitter.com/mounaa_belaid)
@@ -108,7 +108,7 @@ class: about-me-slide, inverse, middle, center
 
 ???
 
-As ….. introduced me. I'm Mouna BELAID and I'm a Business Intelligence Consultant at Prime Analytics and Organizer of R-Ladies Paris
+As ….. introduced me. I'm Mouna BELAID and I'm a Business Intelligence Consultant at Prime Analytics and Community Organizer of R-Ladies Paris
 
 ---
 layout: true
