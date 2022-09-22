@@ -17,9 +17,7 @@ output:
       highlightLines: true
       countIncrementalSlides: true
       ratio: 16:9
-      #ratio: 191:100
       beforeInit: "macros.js"
-      slideNumberFormat: "%current%" 
 ---
 
 ```{r meta, echo=FALSE}
