@@ -490,20 +490,10 @@ template: question
 
 ## GitHub Knowledge Base
 
-.pull-left[
-.my-blue[Commands] | .my-blue[Operations]
-------------- | -------------
-`git diff` | Show unstaged changes between your index and working directory
-`git branch` | List all of the branches in your repository
-`git merge <branch>` | Merge <branch> into the current branch
-]
-
-.pull-right[
 .my-blue[Commands] | .my-blue[Operations]
 ------------- | -------------
 `git pull <remote>` | Fetch the specified remote’s copy of current branch and immediately merge it into the local copy
 `git push <remote> <branch>` | Upload local repository content to a remote repository
-]
 
 **Pull requests** are proposed changes to a repository submitted by a user and accepted or rejected by a repository's collaborators. Like issues, pull requests each have their own discussion forum.
 
